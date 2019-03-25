@@ -21,7 +21,7 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "433973e8fafda5a93ed90141f9487c3b"
+    "revision": "46ea55279ed6d5583c872694b3b3cd11"
   },
   {
     "url": "assets/css/0.styles.8a58566b.css",
@@ -32,32 +32,36 @@ self.__precacheManifest = [
     "revision": "83621669651b9a3d4bf64d1a670ad856"
   },
   {
-    "url": "assets/js/2.be0c9cd2.js",
+    "url": "assets/js/2.d2574d68.js",
     "revision": "13bc36a2531633cf24563ef9d9e5ff6a"
   },
   {
-    "url": "assets/js/3.0579c243.js",
-    "revision": "3c8e8fe4d2a684275388c466c5864091"
+    "url": "assets/js/3.eb3fd172.js",
+    "revision": "e42a831d8944bd35d9e27f4b523c5f2d"
   },
   {
-    "url": "assets/js/4.9c2cdc66.js",
-    "revision": "64b54dd323b21c6793f6a3144f5fa83f"
+    "url": "assets/js/4.13de6179.js",
+    "revision": "4c924a7f64433e9461e9e900cbfd0fc6"
   },
   {
-    "url": "assets/js/5.18a427d4.js",
+    "url": "assets/js/5.81ca9883.js",
     "revision": "e89a81e6a608d3bd9b10854442119b03"
   },
   {
-    "url": "assets/js/6.6e212480.js",
-    "revision": "6a619eea2165cf6f33f5fa6886ae1129"
+    "url": "assets/js/6.914a2598.js",
+    "revision": "6ea097c9017c5cd3d337eb715f97825b"
   },
   {
-    "url": "assets/js/7.7b6e5d2b.js",
-    "revision": "a065a1cd372fd5240a8700c4498df6c1"
+    "url": "assets/js/7.9f9f13f3.js",
+    "revision": "1b94963e27d5e6a71d291381860e8d80"
   },
   {
-    "url": "assets/js/app.5b112726.js",
-    "revision": "47d96add05a24e3e914544570d62c2fb"
+    "url": "assets/js/8.db9fcc52.js",
+    "revision": "8cf56945da5011b391b77a24ff5e85d5"
+  },
+  {
+    "url": "assets/js/app.06c17a4c.js",
+    "revision": "b2ee556d348862c30a4a28104c058dbb"
   },
   {
     "url": "fire.svg",
@@ -65,7 +69,11 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "188ba5f16a555b3548267e98a96806ee"
+    "revision": "9f1afd661deefef8ec15d0d2492e1f5e"
+  },
+  {
+    "url": "others/fe-style.html",
+    "revision": "a16263f1af8290ffd2d9867d8a155cd5"
   },
   {
     "url": "user.png",
