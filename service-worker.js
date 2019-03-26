@@ -21,7 +21,7 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "0f4d01fdfceef0c479c7577c7c13a821"
+    "revision": "c5362469da68120b9505806dd19ebbec"
   },
   {
     "url": "assets/css/0.styles.7e38993a.css",
@@ -60,8 +60,8 @@ self.__precacheManifest = [
     "revision": "8cf56945da5011b391b77a24ff5e85d5"
   },
   {
-    "url": "assets/js/app.3dc60a8f.js",
-    "revision": "467e63ab746e96f09ac6ea8ab8ac5f54"
+    "url": "assets/js/app.a05f2e87.js",
+    "revision": "e24126545d6a779e7d6b102412cd81ec"
   },
   {
     "url": "icons/android-chrome-192x192.png",
@@ -77,11 +77,11 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "8737174e9bef4b928c5a08d95cecac01"
+    "revision": "7465dd4a0d1af1f3ff7ae74a8ca182df"
   },
   {
     "url": "others/fe-style.html",
-    "revision": "d57677d81fa50a4399087261a4a79468"
+    "revision": "f5be1bffb126ade9a56044147ba38da6"
   },
   {
     "url": "user.png",
