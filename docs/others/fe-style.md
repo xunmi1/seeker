@@ -1,8 +1,9 @@
-# 前端代码风格
+# 代码风格
 
-> 范围: FE，Node，miniProgram
-> 说明: 规则分为三类: **必须**、**推荐**、**禁止**。
-
+::: tip
+范围: FE，Node，miniProgram;
+说明: 规则分为三类: **必须**、**推荐**、**禁止**。
+:::
 [[TOC]]
 
 ## JavaScript
@@ -11,7 +12,7 @@
 
 ### 类型 (Types)
 
-::: tip 提示
+::: tip
 截至 ES9,  JavaScript 拥有 [6 种基本数据类型和 1 种引用类型](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types)
 :::
 
@@ -117,7 +118,6 @@
     const age = luke.age;
     ```
 
-    
 
 ### 数组 (Array)
 
@@ -228,7 +228,9 @@
 
 2. **禁止**将形参命名为 `arguments`
 
-   > 会覆盖原来函数作用域内的 arguments 对象
+::: warning
+会覆盖原来函数作用域内的 arguments 对象
+:::
 
 3. **推荐**使用数组解构`...`代替`arguments`
 
@@ -272,6 +274,7 @@
 8. 如果函数体仅有一个单独的语句，返回一个无副作用的 [expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions)，**推荐**省略括号并使用隐式返回
 
 9. **推荐**链式调用时使用换行缩进对齐 (超过两个方法链)
+
 ### 数字 (number)
 
 1. **推荐**使用`Number()`或`~~`进行类型转换
@@ -386,8 +389,7 @@
 
 9. 不同行为或逻辑的语句集，**推荐**空行隔开，更易阅读；
 
-10. 对于 if...else... 、 try...catch...finally 等语句，**推荐**使用在 } 号后添加一个换行。
-
+10. 对于 `if...else...` 、 `try...catch...finally` 等语句，**推荐**使用在 } 号后添加一个换行。
 
 ### 命名 (Naming Conventions)
 
@@ -553,9 +555,9 @@
    ```
 
 2. 未与视图绑定的复杂数据，**推荐**避免声明在`data`中
-
-   > 会严重损害组件生成、渲染的性能
-
+::: warning
+会严重损害组件生成、渲染的性能
+:::
 ### 计算属性 (Computed)
 
 1. 计算属性**必须**有返回值
@@ -568,7 +570,7 @@
 
 2. **禁止**为`<template>` 设置`key`值
 
-   ```vue
+   ```html
    <!-- bad -->
    <template key="PHP"> ... </template>
    

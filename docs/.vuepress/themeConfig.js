@@ -1,5 +1,4 @@
 module.exports = {
-    repo: 'xunmi1/seeker',
     editLinks: true,
     docsDir: 'docs',
     sidebarDepth: 3,
@@ -16,6 +15,10 @@ module.exports = {
         {
             text: '仓库',
             items: [
+                {
+                    text: 'Seeker',
+                    link: 'https://github.com/xunmi1/seeker'
+                },
                 {
                     text: 'New System',
                     link: 'https://xunmi1.github.io/ant-system/dist/index.html'
