@@ -4,7 +4,6 @@
 范围: FE，Node，miniProgram;
 说明: 规则分为三类: **必须**、**推荐**、**禁止**。
 :::
-[[TOC]]
 
 ## JavaScript
 

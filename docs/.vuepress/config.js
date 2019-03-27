@@ -16,7 +16,9 @@ module.exports = {
         '@vuepress/active-header-links'
     ],
     head: [
-        ['link', { rel: 'manifest', href: '/manifest.json' }]
+        ['link', { rel: 'manifest', href: '/manifest.json' }],
+        ['link', { rel: 'icon', href: '/icons/android-chrome-192x192.png' }],
+        ['meta', { name: 'theme-color', content: '#203cc2' }],
     ],
     themeConfig,
     markdown: {
