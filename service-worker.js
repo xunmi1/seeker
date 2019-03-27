@@ -21,11 +21,11 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "f42a357bca52831963de74d95261185a"
+    "revision": "7be1d577b6b881e9766719fa419e32e5"
   },
   {
-    "url": "assets/css/0.styles.7e38993a.css",
-    "revision": "2df3b2698bff50ee57090d7f8d067236"
+    "url": "assets/css/0.styles.2127c9a4.css",
+    "revision": "fad1ea2537519578dcb562c1807f17a0"
   },
   {
     "url": "assets/img/search.83621669.svg",
@@ -52,16 +52,16 @@ self.__precacheManifest = [
     "revision": "6ea097c9017c5cd3d337eb715f97825b"
   },
   {
-    "url": "assets/js/7.c21aeecd.js",
-    "revision": "147d1d68d1a25fa5eda5093247c9f346"
+    "url": "assets/js/7.6a397c10.js",
+    "revision": "e300fd097bf9f53d3528ecaa9a24eb1b"
   },
   {
     "url": "assets/js/8.db9fcc52.js",
     "revision": "8cf56945da5011b391b77a24ff5e85d5"
   },
   {
-    "url": "assets/js/app.da3d6f8e.js",
-    "revision": "6f3c6d7a1f4ef074534709467de838b5"
+    "url": "assets/js/app.af44ef20.js",
+    "revision": "ecbceda4b66e8b0b7f51412c50e70236"
   },
   {
     "url": "icons/android-chrome-192x192.png",
@@ -77,11 +77,11 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "d33f054ecf94d0269e2870d71678130d"
+    "revision": "077f2d2c18f5ac200aea6c19359dc572"
   },
   {
     "url": "others/fe-style.html",
-    "revision": "62e3db58d1aa04d11d79d40212a27969"
+    "revision": "d565daf83c28f1e1f7bcf7eedee6695a"
   },
   {
     "url": "user.png",
