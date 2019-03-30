@@ -10,7 +10,10 @@ module.exports = {
     nav: [
         {
             text: '其他',
-            link: '/others/fe-style'
+            items: [
+                { text: '代码风格', link: '/others/fe-style' },
+                { text: 'Git 小结', link: '/others/git-summary' }
+            ]
         },
         {
             text: '仓库',
@@ -22,7 +25,7 @@ module.exports = {
                 {
                     text: 'New System',
                     link: 'https://xunmi1.github.io/ant-system/dist/index.html'
-                },
+                }
             ]
         },
         {
@@ -31,7 +34,7 @@ module.exports = {
                 { text: 'Vue.js', link: 'https://cn.vuejs.org' },
                 { text: 'Vuex', link: 'https://vuex.vuejs.org' },
                 { text: 'Vue Router', link: 'https://router.vuejs.org' },
-                { text: 'Vue CLI', link: 'https://cli.vuejs.org' },
+                { text: 'Vue CLI', link: 'https://cli.vuejs.org' }
             ]
         }
     ],

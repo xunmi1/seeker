@@ -5,8 +5,7 @@
     "author": "xunmi <xunmi1@outlook.com>",
     "scripts": {
         "docs:dev": "vuepress dev docs",
-        "docs:build": "vuepress build docs",
-        "deploy:io": "sh scripts/deploy.sh"
+        "docs:build": "vuepress build docs"
     },
     "license": "MIT",
     "devDependencies": {
