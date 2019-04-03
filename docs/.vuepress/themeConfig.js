@@ -24,7 +24,7 @@ module.exports = {
                 },
                 {
                     text: 'New System',
-                    link: 'https://xunmi1.github.io/ant-system/dist/index.html'
+                    link: 'https://github.com/xunmi1/ant-system'
                 }
             ]
         },
