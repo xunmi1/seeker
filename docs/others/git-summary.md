@@ -127,13 +127,21 @@ git remote add origin git@github.com:<USERNAME>/<REPO>.git
 # git remote set-url origin <URL>
 ```
 
-5. 删除远程仓库
+5. 重命名远程仓库
+
+```bash
+git remote rename oldname newname
+```
+
+6. 删除远程仓库
 
 ```bash
 # git remote remove <name>
 
 # 移除别名为 origin 的远程仓库
 git remote remove origin
+# or
+git remote rm origin
 ```
 
 ### git branch
@@ -164,7 +172,7 @@ git branch my-branch remote-branch
 ```bash
 # git branch [<options>] (-m | -M) [<old-branch>] <new-branch>
 
-# 将 my-branch 分支(可省略)重命名为 new-branch
+# 将本地 my-branch 分支(可省略)重命名为 new-branch
 git branch -M my-branch new-branch
 ```
 
@@ -191,7 +199,7 @@ git push origin --delete my-branch
 # git branch (--set-upstream | -u) <localBranch> <remote>/<remoteBranch>
 
 # 本地 dev 分支将跟踪 origin 远程仓库的 dev 分支，
-git branch --set-upstream dev origin/dev
+git branch --set-upstream-to=origin/dev dev
 ```
 
 ### git checkout
@@ -268,10 +276,12 @@ git cherry-pick xxxxxx..yyyyyy
 ```bash
 # git push [<options>] [<repository> [<refspec>...]]
 
-# 提交本地仓库当前分支到远程仓库的 master 分支
+# 提交本地仓库 master 分支到远程仓库的 master 分支
 git push origin master
 # 提交本地仓库 dev 分支到远程的 master 分支
-git push origin master:dev
+git push origin dev:master
+# 强制推送，会覆盖提交记录
+git push -f origin
 ```
 
 ### git pull
