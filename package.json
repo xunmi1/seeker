@@ -1,17 +1,17 @@
 {
-    "name": "seeker",
-    "version": "1.0.0",
-    "description": "seeker",
-    "author": "xunmi <xunmi1@outlook.com>",
-    "scripts": {
-        "docs:dev": "vuepress dev docs",
-        "docs:build": "vuepress build docs"
-    },
-    "license": "MIT",
-    "devDependencies": {
-        "@vuepress/plugin-active-header-links": "^1.0.0-alpha.46",
-        "@vuepress/plugin-back-to-top": "^1.0.0-alpha.46",
-        "@vuepress/plugin-pwa": "^1.0.0-alpha.46",
-        "vuepress": "^1.0.0-alpha.46"
-    }
+  "name": "seeker",
+  "version": "1.0.0",
+  "description": "seeker",
+  "author": "xunmi <xunmi1@outlook.com>",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@vuepress/plugin-active-header-links": "^1.2.0",
+    "@vuepress/plugin-back-to-top": "^1.2.0",
+    "@vuepress/plugin-pwa": "^1.2.0",
+    "vuepress": "^1.2.0"
+  }
 }
