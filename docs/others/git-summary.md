@@ -13,7 +13,7 @@ git clone git@github.com:<USERNAME>/<repo>.git
 git clone -b dev git@github.com:<USERNAME>/<repo>.git dev
 ```
 
-2. 将文件变更记录写入到本地的索引库
+2. 将文件变更记录写入到暂存区
 
 ```bash
 # git add [<options>] [--] <pathspec>...
@@ -24,12 +24,14 @@ git add .
 git add src/main.js
 ```
 
-3. 提交变更到工作区
+3. 提交变更到本地版本库
 
 ```bash
 # git commit [<options>] [--] <pathspec>...
-
+# 默认是提交暂存区，不是工作区
 git commit -m "feat: an ordinary commit"
+# 保存到暂存区并提交
+git commit -am "feat: an ordinary commit"
 # 追加提交
 git commit --amend
 # 重置上次提交的 author 和 message
