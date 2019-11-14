@@ -27,7 +27,7 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "3cb73051f8e1ada32347dc5402716b32"
+    "revision": "18e1e7217aa03bbfbba4fe3f5d3b8af1"
   },
   {
     "url": "assets/css/0.styles.8d4168b3.css",
@@ -62,16 +62,16 @@ self.__precacheManifest = [
     "revision": "5f6ebba74f3fa357950741aea204a44c"
   },
   {
-    "url": "assets/js/8.fb5b6451.js",
-    "revision": "4ebd87c5f863d62dbf847bb33ec290a8"
+    "url": "assets/js/8.301714f9.js",
+    "revision": "c555d437f1de85337143f74c92887dad"
   },
   {
     "url": "assets/js/9.e16594f4.js",
     "revision": "e8b86536eff7f27c4565d40df0a559c7"
   },
   {
-    "url": "assets/js/app.1bfd4282.js",
-    "revision": "6befda22792eaa6063e237ed93d7f09d"
+    "url": "assets/js/app.0a591362.js",
+    "revision": "79b2ef8b9871e8ab0e484c09213c384e"
   },
   {
     "url": "icons/android-chrome-192x192.png",
@@ -87,15 +87,15 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "f169c1429eef87d216ed2407aed35da1"
+    "revision": "dfdbce0c9ccbc63c125def4287faeb2e"
   },
   {
     "url": "others/fe-style.html",
-    "revision": "3e043f07795adff0e52ec2718cf34a68"
+    "revision": "66a6053e321b7571d876f56b2d6349a0"
   },
   {
     "url": "others/git-summary.html",
-    "revision": "12620ad470692ad7a1a3ee1dbc3c6bc2"
+    "revision": "c20773de91847f3d954733d73a80999a"
   },
   {
     "url": "user.png",
