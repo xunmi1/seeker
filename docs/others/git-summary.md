@@ -9,7 +9,7 @@
 
 # 克隆仓库
 git clone git@github.com:<USERNAME>/<repo>.git
-# 克隆 dev 分支
+# 克隆 dev 分支并切换到本地 dev 分支
 git clone -b dev git@github.com:<USERNAME>/<repo>.git dev
 ```
 
@@ -356,7 +356,7 @@ git tag -d v1.0.0
 git push origin :refs/tags/v1.0.0
 ```
 6. git stash
-将当前工作区更改的内容暂存，需要时再将重新弹出工作区。
+将当前工作区和暂存区更改的内容暂存，需要时再将重新弹出。
 
 ```bash
 # 临时存放，临时存放区是一个栈的结构，支持多次临时存放
