@@ -35,7 +35,7 @@ git commit -am "feat: an ordinary commit"
 # 追加提交
 git commit --amend
 # 重置上次提交的 author 和 message
-git commit --amend --reset-author 
+git commit --amend --reset-author
 ```
 
 4. 推送代码到远程仓库
@@ -52,7 +52,7 @@ git push origin master:dev
 
 ## 工作原理
 
-![image.png](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Git_operations.svg/1280px-Git_operations.svg.png)
+![image.png](./git-operations.png)
 
 - 工作区 `Working Files`
 - 暂存区`Stage`
@@ -81,7 +81,16 @@ git init
 
 ```bash
 # git add [<options>] [--] <pathspec>...
+
+# 将工作区的文件修改、新增提交到暂存区，不包括删除
+git add .
 ```
+
+| 主要选项        | 说明             |
+| ------------- | ------------- |
+| 默认            | 文件修改、新增  |
+| -u (--update)  | 文件修改、删除  |
+| -A (--all)     | 文件修改、删除、新增  |
 
 ### git commit
 
@@ -237,12 +246,34 @@ git merge origin/master
 
 ### git rebase
 
-重新提交记录
+::: danger
+Note: 绝对不要在公共分支上执行 `rebase` 操作
+:::
+
+重写操作记录
+
+1. 操作分支
 
 ```bash
 # 以 dev 分支重新为起点
 git rebase dev
 
+例子
+git checkout feat
+
+# 重置了 `feat` 分支的基线 (当前分支 `feat`、变基操作的目标基底分支 `master`)
+git rebase master
+
+# 如果出现冲突，解决后继续
+
+# 切换到 `master`, 再合并 `feat` 分支
+git checkout master
+git merge feat
+```
+
+2. 修改记录
+
+```bash
 # -i 是弹出交互界面进行编辑，[startpoint] [endpoint]则指定了一个编辑区间
 git rebase -i [startpoint] [endpoint]
 
@@ -257,6 +288,12 @@ git rebase -i HEAD~3
 # exec：执行其他 bash 命令（缩写:x）
 # drop：丢弃该 commit（缩写:d）
 ```
+
+| 主要选项    | 说明           |
+| ---------- | ------------- |
+| --continue   | 确认已处理完毕，继续下一步  |
+| --skip       | 跳过当前流程，继续下一步  |
+| --abort      | 终止 `rebase` 操作并还原  |
 
 ### git cherry-pick
 
@@ -298,14 +335,14 @@ git push -f origin
 # 即 git fetch origin master && git merge origin/master
 git pull origin master
 
-# 通过变基的方式来拉取代码
+# (推荐) 通过变基的方式来拉取代码, 保持线性的提交记录
 # 等同于 git fetch origin master && git rebase origin/master
 git pull --rebase origin master
 ```
 
 ### git reset
 
-修改`HEAD`的位置
+回退
 
 ```bash
 # git reset [--hard|soft|mixed|merge|keep] [<commit>
@@ -315,6 +352,12 @@ git reset --hard xxxxxx
 
 # 或者使用 revert 反向创建新记录，重做之后的提交内容
 ```
+
+| 主要选项    | 说明           |
+| ---------- | ------------- |
+| --soft     | 暂存区和工作区都不会被改变  |
+| --mixed    | 默认选项, 暂存区会同步到指定的提交，工作区不受影响  |
+| --hard     | 暂存区和工作区都同步到指定的提交  |
 
 ### git tag
 
@@ -355,7 +398,8 @@ git push origin --delete v1.0.0
 git tag -d v1.0.0
 git push origin :refs/tags/v1.0.0
 ```
-6. git stash
+### git stash
+
 将当前工作区和暂存区更改的内容暂存，需要时再将重新弹出。
 
 ```bash
@@ -395,6 +439,25 @@ git stash clear            # 删除所有
 
 ```bash
 git ls-files src/ | grep '\.css$' | xargs git add
+```
+
+### 修改 commit 时间
+
+```bash
+# 使用 rebase 修改历史提交
+git rebase -i HEAD~4
+
+# 将 pick 改为 edit
+
+# 设置提交时间的临时环境变量 (可选)
+# 以 PowerShell 为例
+$env:GIT_COMMITTER_DATE="2017-10-08T09:51:07"
+
+# 修改 commit 的时间 (author date)
+git commit --amend --date="2017-10-08T09:51:07"
+
+# 确定并进入下一个需要修改的提交
+git rebase --continue
 ```
 
 ### 删除所有提交中的指定文件

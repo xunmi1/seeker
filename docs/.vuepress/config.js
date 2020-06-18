@@ -27,4 +27,6 @@ module.exports = {
   locales: {
     '/': { lang: 'zh-CN' },
   },
+
+  evergreen: true,
 };
