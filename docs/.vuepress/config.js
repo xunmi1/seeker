@@ -5,7 +5,7 @@ const plugins = [
   '@vuepress/back-to-top',
   '@vuepress/active-header-links',
   '@vuepress/nprogress',
-  ['vuepress-plugin-medium-zoom', { options: { background: '#f5f5f5' } }],
+  ['@vuepress/medium-zoom', { options: { background: '#f5f5f5' } }],
 ];
 
 module.exports = {
