@@ -49,7 +49,6 @@ git push origin master
 git push origin master:dev
 ```
 
-
 ## 工作原理
 
 ![image.png](./git-operations.png)
@@ -61,11 +60,11 @@ git push origin master:dev
 - 远程仓库`Remote`
 
 工作流程
+
 1. 在工作目录中修改文件。
 2. 暂存文件，将文件的快照放入暂存区域。
 3. 提交更新，找到暂存区域的文件，将快照永久性存储到本地仓库的分支中
 4. 推送并合并到远程仓库的分支
-
 
 ## 常用命令
 
@@ -86,15 +85,16 @@ git init
 git add .
 ```
 
-| 主要选项        | 说明             |
-| ------------- | ------------- |
-| 默认            | 文件修改、新增  |
-| -u (--update)  | 文件修改、删除  |
-| -A (--all)     | 文件修改、删除、新增  |
+| 主要选项      | 说明                 |
+| ------------- | -------------------- |
+| 默认          | 文件修改、新增       |
+| -u (--update) | 文件修改、删除       |
+| -A (--all)    | 文件修改、删除、新增 |
 
 ### git commit
 
 1. 提交
+
 ```bash
 # git commit [<options>] [--] <pathspec>...
 
@@ -102,6 +102,7 @@ git commit -m 'message'
 ```
 
 2. 追加提交，修改上一个 commit 的信息
+
 ```bash
 git commit --amend -m 'new message'
 ```
@@ -289,11 +290,11 @@ git rebase -i HEAD~3
 # drop：丢弃该 commit（缩写:d）
 ```
 
-| 主要选项    | 说明           |
-| ---------- | ------------- |
-| --continue   | 确认已处理完毕，继续下一步  |
-| --skip       | 跳过当前流程，继续下一步  |
-| --abort      | 终止 `rebase` 操作并还原  |
+| 主要选项   | 说明                       |
+| ---------- | -------------------------- |
+| --continue | 确认已处理完毕，继续下一步 |
+| --skip     | 跳过当前流程，继续下一步   |
+| --abort    | 终止 `rebase` 操作并还原   |
 
 ### git cherry-pick
 
@@ -353,11 +354,11 @@ git reset --hard xxxxxx
 # 或者使用 revert 反向创建新记录，重做之后的提交内容
 ```
 
-| 主要选项    | 说明           |
-| ---------- | ------------- |
-| --soft     | 暂存区和工作区都不会被改变  |
-| --mixed    | 默认选项, 暂存区会同步到指定的提交，工作区不受影响  |
-| --hard     | 暂存区和工作区都同步到指定的提交  |
+| 主要选项 | 说明                                               |
+| -------- | -------------------------------------------------- |
+| --soft   | 暂存区和工作区都不会被改变                         |
+| --mixed  | 默认选项, 暂存区会同步到指定的提交，工作区不受影响 |
+| --hard   | 暂存区和工作区都同步到指定的提交                   |
 
 ### git tag
 
@@ -398,6 +399,7 @@ git push origin --delete v1.0.0
 git tag -d v1.0.0
 git push origin :refs/tags/v1.0.0
 ```
+
 ### git stash
 
 将当前工作区和暂存区更改的内容暂存，需要时再将重新弹出。
@@ -417,21 +419,19 @@ git stash drop stash@{1}   # 删除指定储存
 git stash clear            # 删除所有
 ```
 
-
 ## 仓库元数据
 
 每一个代码仓库目录下，都会有一个 `.git` 的文件夹，其中主要文件如下：
 
-| 文件(夹)     | 含义 |
-| :-----------| :--------------------------------------------------|
-| config      | 配置文件 |
-| description | 描述，仅供 Git Web 程序使用 |
-| HEAD        | 当前被检出的分支 |
-| index       | 暂存区信息 |
-| hooks/      | 客户端或服务端的钩子脚本（hook scripts）|
-| info/       | 全局排除 global exclude 文件, 不被记录在 .gitignore 文件中的忽略模式ignored patterns |
-| refs/       | 数据（分支）的提交对象的指针 |
-
+| 文件(夹)    | 含义                                                                                  |
+| :---------- | :------------------------------------------------------------------------------------ |
+| config      | 配置文件                                                                              |
+| description | 描述，仅供 Git Web 程序使用                                                           |
+| HEAD        | 当前被检出的分支                                                                      |
+| index       | 暂存区信息                                                                            |
+| hooks/      | 客户端或服务端的钩子脚本（hook scripts）                                              |
+| info/       | 全局排除 global exclude 文件, 不被记录在 .gitignore 文件中的忽略模式 ignored patterns |
+| refs/       | 数据（分支）的提交对象的指针                                                          |
 
 ## 技巧
 
@@ -470,9 +470,8 @@ git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch -r bu
 git reflog expire --expire=now --all && git gc --prune=now --aggressive
 ```
 
-
 ## 其他
 
-###  [LearnGitBranching](https://learngitbranching.js.org/)
+### [LearnGitBranching](https://learngitbranching.js.org/)
 
 ### [Git 的奇技淫巧](https://github.com/521xueweihan/git-tips)

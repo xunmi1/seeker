@@ -28,7 +28,7 @@
  ```javascript
  // bad
  const obj = new Object();
- 
+
  // good
  const obj = {};
  const emptyObj = Object.created(null);
@@ -45,7 +45,7 @@ const obj = {
     return atom.value + value;
   }
 };
-    
+
 // good
 const obj = {
   value,
@@ -352,7 +352,7 @@ const good = function () {};
 if(isPHP) {
   good();
 }
-   
+
 // good
 if (isJS) {
   good();
@@ -367,7 +367,7 @@ if (isJS) {
 // bad
 let foo = 1 ;
 let arr = [1 , 2];
-    
+
 // good
 let foo = 1;
 let arr = [1, 2];
@@ -376,7 +376,7 @@ let arr = [1, 2];
 5. **推荐**在同行大括号内两侧放置一个空格
 
 ```javascript
- const obj = { name: 'obj' }; 
+ const obj = { name: 'obj' };
 ```
 
 6. **推荐**在行的末尾不使用空格
@@ -490,7 +490,7 @@ export default {
 };
 ```
 
-### 组件依赖 (Components) 
+### 组件依赖 (Components)
 
 1. **禁止**引入模板中未使用的子组件
 2. **推荐**组件名和实际引用的组件名保持一致
