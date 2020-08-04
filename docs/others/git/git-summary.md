@@ -51,7 +51,7 @@ git push origin master:dev
 
 ## 工作原理
 
-![image.png](./git-operations.png)
+![image.png](./assets/git-operations.png)
 
 - 工作区 `Working Files`
 - 暂存区`Stage`
@@ -435,13 +435,7 @@ git stash clear            # 删除所有
 
 ## 技巧
 
-### 添加指定文件
-
-```bash
-git ls-files src/ | grep '\.css$' | xargs git add
-```
-
-### 修改 commit 时间
+- 修改 commit 时间
 
 ```bash
 # 使用 rebase 修改历史提交
@@ -460,18 +454,10 @@ git commit --amend --date="2017-10-08T09:51:07"
 git rebase --continue
 ```
 
-### 删除所有提交中的指定文件
+## 参考链接
 
-```bash
-# 删除文件
-git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch -r build' --prune-empty --tag-name-filter cat -- --all
+- [LearnGitBranching](https://learngitbranching.js.org/)
 
-# 触发 GC
-git reflog expire --expire=now --all && git gc --prune=now --aggressive
-```
+- [git-tips](https://github.com/521xueweihan/git-tips)
 
-## 其他
-
-### [LearnGitBranching](https://learngitbranching.js.org/)
-
-### [Git 的奇技淫巧](https://github.com/521xueweihan/git-tips)
+- [Commit Message Format](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit)

@@ -1,4 +1,5 @@
-const SELF_REPO = 'https://github.com/xunmi1/';
+const selfURL = 'https://github.com/xunmi1/';
+const selfRepositories = ['seeker', 'admin-template-vue', 'light-storage', 'event-channel'];
 
 module.exports = [
   {
@@ -10,9 +11,6 @@ module.exports = [
   },
   {
     text: '仓库',
-    items: [
-      { text: 'seeker', link: SELF_REPO + 'seeker' },
-      { text: 'admin-template-vue', link: SELF_REPO + 'admin-template-vue' },
-    ],
+    items: selfRepositories.map(v => ({ text: v, link: selfURL + v })),
   },
 ];
