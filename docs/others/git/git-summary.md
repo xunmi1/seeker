@@ -316,10 +316,15 @@ git cherry-pick xxxxxx..yyyyyy
 ```bash
 # git push [<options>] [<repository> [<refspec>...]]
 
-# 提交本地仓库 master 分支到远程仓库的 master 分支
+# 推送本地仓库 master 分支到远程仓库的 `master` 分支
 git push origin master
-# 提交本地仓库 dev 分支到远程的 master 分支
+
+# 推送本地仓库 `dev` 分支到远程仓库的 `master` 分支
 git push origin dev:master
+
+# 推送指定记录到远程分支
+git push origin xxxxxxx:master
+
 # 强制推送，会覆盖提交记录
 git push -f origin
 ```
