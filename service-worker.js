@@ -27,11 +27,11 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "c5e23f2b92e86899e7ae5dd87a87466a"
+    "revision": "0976dcf1ec8bac5abd548601b1d15a52"
   },
   {
-    "url": "assets/css/0.styles.cb318ca4.css",
-    "revision": "7d32fd6b117afd35e26b207aaaf26fa2"
+    "url": "assets/css/0.styles.e46c6d33.css",
+    "revision": "7aa03c88ec0d233477c70405d3d31af7"
   },
   {
     "url": "assets/img/git-operations.14ad858d.png",
@@ -42,11 +42,11 @@ self.__precacheManifest = [
     "revision": "83621669651b9a3d4bf64d1a670ad856"
   },
   {
-    "url": "assets/js/2.38e26469.js",
-    "revision": "214995664642f1549062f2f6682dd282"
+    "url": "assets/js/2.5b869ff5.js",
+    "revision": "c463a07426d871d43ef0cd67e2908da9"
   },
   {
-    "url": "assets/js/3.0e8d9838.js",
+    "url": "assets/js/3.76528df0.js",
     "revision": "2d58dcddd2a9e0b3608fb5ba9016ed33"
   },
   {
@@ -54,28 +54,28 @@ self.__precacheManifest = [
     "revision": "1586a13816f001fb2bdbab38ca6b238d"
   },
   {
-    "url": "assets/js/5.c2e54e7f.js",
-    "revision": "927ed7d23f45c16eb9a9840e31037f49"
+    "url": "assets/js/5.260275bd.js",
+    "revision": "66b1ed6eb2a90a938655996b522dc374"
   },
   {
-    "url": "assets/js/6.1299e300.js",
+    "url": "assets/js/6.a238e926.js",
     "revision": "9ab1f3d807e9319616883db480eb066b"
   },
   {
-    "url": "assets/js/7.4a17cf70.js",
+    "url": "assets/js/7.d7224c3f.js",
     "revision": "94172a0186c420197e97ba214b16089c"
   },
   {
-    "url": "assets/js/8.6d610868.js",
-    "revision": "54316d8e2e74250328d6c85222e0f1ab"
+    "url": "assets/js/8.f2eaf20b.js",
+    "revision": "444b3364cfc3bf8c48b0bb278b6fd54b"
   },
   {
     "url": "assets/js/9.b3d40b4e.js",
     "revision": "18eb4613fa43c4fb1e31d7290ed7dec1"
   },
   {
-    "url": "assets/js/app.f770d71f.js",
-    "revision": "7693eecd9a4ed487c23d357607f2c373"
+    "url": "assets/js/app.6849a153.js",
+    "revision": "ea99875b483d094bcb01d162f1fbf20e"
   },
   {
     "url": "icons/android-chrome-192x192.png",
@@ -91,15 +91,15 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "a3ff60f8e7f04e842ef0ef71a502e88d"
+    "revision": "f536e5e0c091ba1bdcc5e9529fc4d497"
   },
   {
     "url": "others/fe-style.html",
-    "revision": "f074b92aa4887e3620a41f6190d61f91"
+    "revision": "ec0621e6f186da9050dd35e53a76b051"
   },
   {
     "url": "others/git/git-summary.html",
-    "revision": "4ad33016e99435ab37c9c8728ae9aea3"
+    "revision": "f871b8ec1e0573d72bec29d83c686c65"
   },
   {
     "url": "user.png",
