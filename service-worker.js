@@ -27,7 +27,7 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "0976dcf1ec8bac5abd548601b1d15a52"
+    "revision": "bc069e02b31d9f7778f764f1e42f1a1e"
   },
   {
     "url": "assets/css/0.styles.e46c6d33.css",
@@ -42,6 +42,10 @@ self.__precacheManifest = [
     "revision": "83621669651b9a3d4bf64d1a670ad856"
   },
   {
+    "url": "assets/js/10.d29af238.js",
+    "revision": "d7a5da0eb6db067396637c71ed422dd6"
+  },
+  {
     "url": "assets/js/2.5b869ff5.js",
     "revision": "c463a07426d871d43ef0cd67e2908da9"
   },
@@ -50,11 +54,11 @@ self.__precacheManifest = [
     "revision": "2d58dcddd2a9e0b3608fb5ba9016ed33"
   },
   {
-    "url": "assets/js/4.b687a8a0.js",
-    "revision": "1586a13816f001fb2bdbab38ca6b238d"
+    "url": "assets/js/4.bf7865e1.js",
+    "revision": "f390304232f286deede2b98f31b4184e"
   },
   {
-    "url": "assets/js/5.260275bd.js",
+    "url": "assets/js/5.de8f68df.js",
     "revision": "66b1ed6eb2a90a938655996b522dc374"
   },
   {
@@ -70,12 +74,12 @@ self.__precacheManifest = [
     "revision": "444b3364cfc3bf8c48b0bb278b6fd54b"
   },
   {
-    "url": "assets/js/9.b3d40b4e.js",
-    "revision": "18eb4613fa43c4fb1e31d7290ed7dec1"
+    "url": "assets/js/9.82dc1e52.js",
+    "revision": "f494d635a4c0e7f5de22a75c76b71936"
   },
   {
-    "url": "assets/js/app.6849a153.js",
-    "revision": "ea99875b483d094bcb01d162f1fbf20e"
+    "url": "assets/js/app.d4860229.js",
+    "revision": "7d4c594ca646a3afcef070abf29e86b2"
   },
   {
     "url": "icons/android-chrome-192x192.png",
@@ -91,15 +95,19 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "f536e5e0c091ba1bdcc5e9529fc4d497"
+    "revision": "57367ba6f738c4e869dc56d05012ba67"
   },
   {
     "url": "others/fe-style.html",
-    "revision": "ec0621e6f186da9050dd35e53a76b051"
+    "revision": "abffdeb57745c6f51783429060a5ad08"
   },
   {
-    "url": "others/git/git-summary.html",
-    "revision": "f871b8ec1e0573d72bec29d83c686c65"
+    "url": "others/git/index.html",
+    "revision": "2751eb58d5a7d2eb0ca3eeda6a640505"
+  },
+  {
+    "url": "others/typescript/index.html",
+    "revision": "e96685d188674c24dc071e8f0f420a27"
   },
   {
     "url": "user.png",
