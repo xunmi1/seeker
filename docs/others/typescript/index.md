@@ -37,9 +37,9 @@
 
   3. 利用 `extends` 和 `infer` 的 [`inference from conditional types`](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-8.html#type-inference-in-conditional-types) 的特性
 
-    ::: tip
-    在**抗变**位置上，可以将多个有相同类型的候选项推导出**交叉类型**；在**协变**位置上，可以推导出**联合类型**。
-    :::
+  ::: tip
+  在**抗变**位置上，可以将多个有相同类型的候选项推导出**交叉类型**；在**协变**位置上，可以推导出**联合类型**。
+  :::
 
   4. 其中 `I` 位于抗变位置，最终获得交叉类型
 

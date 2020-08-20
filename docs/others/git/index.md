@@ -272,6 +272,8 @@ git checkout master
 git merge feat
 ```
 
+![git rebase](./assets/git-rebase.gif)
+
 2. 修改记录
 
 ```bash
@@ -280,15 +282,19 @@ git rebase -i [startpoint] [endpoint]
 
 # 编辑近三次提交
 git rebase -i HEAD~3
-
-# pick：保留该 commit（缩写:p）
-# reword：保留该 commit，修改提交信息（缩写:r）
-# edit：保留该 commit, 但我要停下来修改该提交（缩写:e）
-# squash：将该 commit 和前一个 commit 合并（缩写:s）
-# fixup：将该 commit 和前一个 commit 合并，但不会保留该提交的信息（缩写:f）
-# exec：执行其他 bash 命令（缩写:x）
-# drop：丢弃该 commit（缩写:d）
 ```
+
+| 操作类型 | 说明                                                               |
+| -------- | ------------------------------------------------------------------ |
+| pick     | 保留该 commit（缩写:p）                                            |
+| reword   | 保留该 commit，修改提交信息（缩写:r）                              |
+| edit     | 保留该 commit, 停下来修改该提交（缩写:e）                          |
+| squash   | 将该 commit 和前一个 commit 合并（缩写:s）                         |
+| fixup    | 将该 commit 和前一个 commit 合并，但不会保留该提交的信息（缩写:f） |
+| exec     | 执行其他 bash 命令（缩写:x）                                       |
+| drop     | 丢弃该 commit（缩写:d）                                            |
+
+![git rebase-squash](./assets/git-rebase-squash.gif)
 
 | 主要选项   | 说明                       |
 | ---------- | -------------------------- |
@@ -308,6 +314,8 @@ git cherry-pick xxxxxx
 # 将 xxxxxx 到 yyyyyy 的所有提交记录合并到当前分支下
 git cherry-pick xxxxxx..yyyyyy
 ```
+
+![git cherry-pick](./assets/git-cherry-pick.gif)
 
 ### git push
 
@@ -353,7 +361,7 @@ git pull --rebase origin master
 ```bash
 # git reset [--hard|soft|mixed|merge|keep] [<commit>
 
-# 回退到 xxxxxx，丢弃之后的提交内容
+# 回退到 xxxxxx，并丢弃之后的提交内容
 git reset --hard xxxxxx
 
 # 或者使用 revert 反向创建新记录，重做之后的提交内容
@@ -364,6 +372,18 @@ git reset --hard xxxxxx
 | --soft   | 暂存区和工作区都不会被改变                         |
 | --mixed  | 默认选项, 暂存区会同步到指定的提交，工作区不受影响 |
 | --hard   | 暂存区和工作区都同步到指定的提交                   |
+
+![git reset-soft](./assets/git-reset-soft.gif)
+
+![git reset-hard](./assets/git-reset-hard.gif)
+
+### git reflog
+
+查看所有已经执行过的操作日志，配合 `git reset` 可以恢复到操作之前的状态
+
+![git reflog](./assets/git-reflog.gif)
+
+![git reflog & git reset](./assets/git-reflog&git-reset.gif)
 
 ### git tag
 
@@ -416,52 +436,115 @@ git stash
 # 查看所有存储内容
 git stash list
 
-# 重新弹出到工作区
+# 恢复最近的一次暂存
+git stash apply
+
+# 恢复暂存并删除暂存记录
 git stash pop
 
 # 删除储存内容
-git stash drop stash@{1}   # 删除指定储存
-git stash clear            # 删除所有
+git stash drop stash@{1}
+
+# 删除所有
+git stash clear
+```
+
+## 配置
+
+```properties
+[core]
+  # 使用 VS Code 作为默认的编辑器
+  editor = code --wait
+  # 开启对文件名大小写的识别
+  ignorecase = false
+  # 禁止自动转换换行符
+  autocrlf = false
+  # 禁止提交包含混合换行符的文件
+  safecrlf = true
+  # 不再将大于 `0x80` 的字节视为 "异常"
+  quotepath = false
+  # 忽略文件权限的变化
+  filemode = false
+  # 仅在 Mac OS 平台, 还原文件名的 `unicode` 解构
+  precomposeUnicode = true
+
+[branch]
+  # `git pull` 总是使用 `rebase`
+  autoSetupRebase = always
+
+[merge]
+  # 禁止快速合并
+  ff = false
+  # 使用 VS Code 作为合并工具 (对应 mergetool 配置)
+  tool = code
+[mergetool "code"]
+  cmd = code --wait $MERGED
+  # 退出返回值是否表示合并操作成功
+  trustExitCode = true
+
+[diff]
+  tool = code
+# 需运行 `git difftool`
+[difftool]
+  # 禁用打开工具时的对话询问
+  prompt = false
+[difftool "code"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+
+[user]
+  name = xxx
+  email = xxx@xx.com
 ```
 
 ## 仓库元数据
 
 每一个代码仓库目录下，都会有一个 `.git` 的文件夹，其中主要文件如下：
 
-| 文件(夹)    | 含义                                                                                  |
-| :---------- | :------------------------------------------------------------------------------------ |
-| config      | 配置文件                                                                              |
-| description | 描述，仅供 Git Web 程序使用                                                           |
-| HEAD        | 当前被检出的分支                                                                      |
-| index       | 暂存区信息                                                                            |
-| hooks/      | 客户端或服务端的钩子脚本（hook scripts）                                              |
-| info/       | 全局排除 global exclude 文件, 不被记录在 .gitignore 文件中的忽略模式 ignored patterns |
-| refs/       | 数据（分支）的提交对象的指针                                                          |
+| 文件(夹)    | 含义                                                                   |
+| :---------- | :--------------------------------------------------------------------- |
+| config      | 配置文件                                                               |
+| description | 描述，仅供 Git Web 程序使用                                            |
+| HEAD        | 当前被检出的分支                                                       |
+| index       | 暂存区信息                                                             |
+| hooks/      | 客户端或服务端的钩子脚本（hook scripts）                               |
+| info/       | 全局排除 global exclude 文件, 不被记录在 `.gitignore` 文件中的忽略模式 |
+| refs/       | 数据（分支）的提交对象的指针                                           |
 
-## 技巧
+## 其他
 
 - 修改 commit 时间
 
-```bash
-# 使用 rebase 修改历史提交
-git rebase -i HEAD~4
+  ```bash
+  # 使用 rebase 修改历史提交
+  git rebase -i HEAD~4
 
-# 将 pick 改为 edit
+  # 将 pick 改为 edit
 
-# 设置提交时间的临时环境变量 (可选)
-# 以 PowerShell 为例
-$env:GIT_COMMITTER_DATE="2017-10-08T09:51:07"
+  # 设置提交时间的临时环境变量 (可选)
+  # 以 PowerShell 为例
+  $env:GIT_COMMITTER_DATE="2017-10-08T09:51:07"
 
-# 修改 commit 的时间 (author date)
-git commit --amend --date="2017-10-08T09:51:07"
+  # 修改 commit 的时间 (author date)
+  git commit --amend --date="2017-10-08T09:51:07"
 
-# 确定并进入下一个需要修改的提交
-git rebase --continue
-```
+  # 确定并进入下一个需要修改的提交
+  git rebase --continue
+  ```
+
+- 取消跟踪
+
+  1. 将指定文件 (目录) `xxx` 加入 `.gitignore` 文件中
+
+  2. 清理缓存
+
+     ```bash
+     # 清理 `xxx` 的缓存
+     git rm –cached xxx
+     ```
 
 ## 参考链接
 
-- [LearnGitBranching](https://learngitbranching.js.org/)
+- [LearnGitBranching](https://github.com/pcottle/learnGitBranching)
 
 - [git-tips](https://github.com/521xueweihan/git-tips)
 
