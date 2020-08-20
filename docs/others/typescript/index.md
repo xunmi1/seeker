@@ -47,6 +47,9 @@
 
   ```typescript
   type TupleToUnion<T> = T extends Array<infer U> ? U : never;
+
+  // or
+  type TupleToUnion<T extends any[]> = T[number];
   ```
 
   `U` 位于协变位置，最终获得联合类型
