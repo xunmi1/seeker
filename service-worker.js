@@ -27,11 +27,11 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "15c0bf0098a53e1a67d0d9326008f873"
+    "revision": "312ccb856e4f738e2c26cc2a08db49ee"
   },
   {
-    "url": "assets/css/0.styles.e46c6d33.css",
-    "revision": "7aa03c88ec0d233477c70405d3d31af7"
+    "url": "assets/css/0.styles.96f556af.css",
+    "revision": "30f36358c13135383b1556e187739bb8"
   },
   {
     "url": "assets/img/git-cherry-pick.486f540a.gif",
@@ -74,15 +74,15 @@ self.__precacheManifest = [
     "revision": "4999e76a2acc36bf46da9e50092f93c8"
   },
   {
-    "url": "assets/js/2.4290bd13.js",
-    "revision": "850c963b1eb9f635fbd5c2f00f377840"
+    "url": "assets/js/2.32439ef3.js",
+    "revision": "e8089a23e30c8603e615ab83f76b52b6"
   },
   {
-    "url": "assets/js/3.005d6e79.js",
+    "url": "assets/js/3.cd02489f.js",
     "revision": "fb36df26c237af2443dadac0da5d1031"
   },
   {
-    "url": "assets/js/4.55b32d71.js",
+    "url": "assets/js/4.639b55dc.js",
     "revision": "355ae8e6264235c913907a9ac1767940"
   },
   {
@@ -90,24 +90,24 @@ self.__precacheManifest = [
     "revision": "993ba31fef80c199d004e6d25a7c27bc"
   },
   {
-    "url": "assets/js/6.0001f663.js",
+    "url": "assets/js/6.2d2ddd3d.js",
     "revision": "6ac503d201bba60ab61a11a55e86c15e"
   },
   {
-    "url": "assets/js/7.15ad24de.js",
+    "url": "assets/js/7.2d6645cc.js",
     "revision": "803fa4cdc6bb330d52808231f0c700e8"
   },
   {
-    "url": "assets/js/8.a9daf15b.js",
+    "url": "assets/js/8.9fdaf01a.js",
     "revision": "25b2250cae5f5734dba5aedcf012d351"
   },
   {
-    "url": "assets/js/9.2da8a9c7.js",
+    "url": "assets/js/9.312e3a48.js",
     "revision": "fa7034682ee9e9c1d0234ca09ecefe5e"
   },
   {
-    "url": "assets/js/app.a68d5109.js",
-    "revision": "862f2a2386d13b3ed099784a61366639"
+    "url": "assets/js/app.15483d2c.js",
+    "revision": "537a8f0c2d4fa63b60055ea5b2d70b76"
   },
   {
     "url": "icons/android-chrome-192x192.png",
@@ -123,19 +123,19 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "9dae57220b83cffc78f524407d31c1e4"
+    "revision": "1320a1145c6e1642c66e0dd1608ffe8f"
   },
   {
     "url": "others/fe-style.html",
-    "revision": "db5e8bb7edacfa7a024a50d10e5c506f"
+    "revision": "0328715bb5b76c8de98d592035248e59"
   },
   {
     "url": "others/git/index.html",
-    "revision": "5dc8028f1e8a946eab1f86d986c7dc06"
+    "revision": "2dde3aeec4c475f7cebe153c8997964b"
   },
   {
     "url": "others/typescript/index.html",
-    "revision": "1bf78729a07291d5d384e7e710ce0ab6"
+    "revision": "b8fd71e1205f471339d0366d401271e1"
   },
   {
     "url": "user.png",
